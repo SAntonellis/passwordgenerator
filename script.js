@@ -30,3 +30,31 @@ const UPPERCASE_CODES = arrayFromLowToHigh(65, 90);
    );
    resultDOM.innerText = password;
  });
+
+ let generatePassword = (
+  characterAmount,
+  includeUppercase,
+  includeNumbers,
+  includeSymbols
+) => {
+  let charCodes = LOWERCASE_CODES;
+  if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CODES);
+  if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CODES);
+  if (includeNumbers) charCodes = charCodes.concat(NUMBER_CODES);
+  const passwordCharacters = [];
+  for (let i = 0; i < characterAmount; i++) {
+    const characterCode =
+      charCodes[Math.floor(Math.random() * charCodes.length)];
+    passwordCharacters.push(String.fromCharCode(characterCode));
+  }
+  return passwordCharacters.join('');
+};
+
+
+function arrayFromLowToHigh(low, high) {
+  const array = [];
+  for (let i = low; i <= high; i++) {
+    array.push(i);
+  }
+  return array;
+}
