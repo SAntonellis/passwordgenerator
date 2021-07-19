@@ -23,7 +23,7 @@ body {
   padding-right: 20px;
 }
 
-header {
+.header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
@@ -52,6 +52,13 @@ header {
 
 .card-body {
   min-height: 100px;
+}
+
+.option {
+  text-align: center;
+  padding: 10px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
 }
 
 .card-footer {
@@ -98,6 +105,27 @@ button[disabled] {
 }
 
 #password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+}
+
+#result {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
