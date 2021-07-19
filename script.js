@@ -1,14 +1,8 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+const resultDOM = document.getElementById('result');
+const copybtnDOM = document.getElementById('copy');
+const lengthDOM = document.getElementById('length');
+const uppercaseDOM = document.getElementById('uppercase');
+const numbersDOM = document.getElementById('numbers');
+const symbolsDOM = document.getElementById('symbols');
+const generatebtn = document.getElementById('generate');
+const form = document.getElementById('passwordGeneratorForm');
